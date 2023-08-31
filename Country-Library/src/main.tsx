@@ -16,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <ThemeProvider theme={ theme }>
         <GlobalStyle />
         <GlobalFonts />
+        <Header />
         <Routes>
             <Route path='/Country-Library/' element={ <App/> }></Route>
             <Route path='/Country-Library/CountryDetail/:name' element={ <CountryDetail/> }></Route>

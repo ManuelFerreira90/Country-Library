@@ -10,7 +10,6 @@ function Header() {
         setDarkMode
     } = useAppContext();
     
-    console.log(darkMode);
     return (
         <HeaderStyled background={darkMode ? 'primary' : 'secondary'}>
             <PStyled background={darkMode ? 'primary' : 'secondary'}>

@@ -1,11 +1,16 @@
 import { Wrapper } from '../assets/components/App.style';
 import Country from '../assets/components/Country/Country';
+import useAppContext from '../assets/hook/useAppContext';
 
 function App() {
+
+  const {
+    darkMode
+  } = useAppContext();
+
   return (
-    <Wrapper>
+    <Wrapper background={darkMode ? 'primary' : 'secondary'}>
       <Country />
-      <p>tete</p>
     </Wrapper>
   );
 }

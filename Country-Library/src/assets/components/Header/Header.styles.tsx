@@ -3,7 +3,7 @@ import { theme } from '../Theme';
 
 export const HeaderStyled = styled.header<{ background: string }>`
     background-color: ${(props) => 
-        props.background === 'primary' ? ({ theme }) => theme.colors.primary : theme.colors.secondary};
+        props.background === 'primary' ? ({ theme }) => theme.colors.backgroundLight : theme.colors.backgroundDark};
     height: 80px;
     display: flex;
     justify-content: space-between;
