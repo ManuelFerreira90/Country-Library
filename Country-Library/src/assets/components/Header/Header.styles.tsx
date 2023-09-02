@@ -3,15 +3,20 @@ import { theme } from '../Theme';
 
 export const HeaderStyled = styled.header<{ background: string }>`
     background-color: ${(props) => 
-        props.background === 'primary' ? ({ theme }) => theme.colors.backgroundLight : theme.colors.backgroundDark};
+        props.background === 'primary' ? ({ theme }) => theme.colors.backgroudLight : theme.colors.secondary};
     height: 80px;
+    width: 100%;
+    position: fixed;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px;
+    padding: 0 10%;
     color: black;
     font-weight: 400;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
+
 `;
 
 export const ButtonStyled = styled.button<{ background: string }>`
