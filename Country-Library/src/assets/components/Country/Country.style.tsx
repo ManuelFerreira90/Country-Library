@@ -6,13 +6,11 @@ export const WrapperCountry = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 
-  padding-top: 10%;
+  padding-top: 5%;
   margin-left: 10%;
   margin-right: 11%;
 
   gap: 5.7%;
-
-  border: 1px solid black;
 `;
 
 export const CardCountry = styled.div<{ background: String }>`

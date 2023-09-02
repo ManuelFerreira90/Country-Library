@@ -8,7 +8,6 @@ function Country() {
 
     const {
       darkMode,
-      setDarkMode
     } = useAppContext();
 
     const [countries, setCountries] = useState<CountryComponets[]>([]);
@@ -18,12 +17,6 @@ function Country() {
         setCountries(response);
       });
     }, []);
-
-    // console.log(countries);
-    // if (countries.length > 0) {
-    //   let { name, population, region, capital, flags } = countries[0];
-    //   console.log(flags.png);
-    // }
 
     const BuildContries = () => {
       return countries.map((Country) => {

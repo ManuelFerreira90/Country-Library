@@ -8,9 +8,10 @@ interface AppProviderProps {
   
 export default function AppProvider({ children }: AppProviderProps) { 
     const [darkMode, setDarkMode] = useState(false);
+    const [search, setSearch] = useState('');
   
     return (
-      <AppContext.Provider value={{ darkMode, setDarkMode }}>
+      <AppContext.Provider value={{ darkMode, setDarkMode, search, setSearch }}>
         {children}
       </AppContext.Provider>
     );
