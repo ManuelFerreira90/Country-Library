@@ -17,7 +17,7 @@ export const SearchWrapper = styled.form`
 
     border: 1px solid black;
 `
-export const SearchInput = styled(InputSearch)<{ background: String }>`
+export const SearchInput = styled.input<{ background: String }>`
     background: ${(props) => 
         props.background === 'primary' ? ({ theme }) => theme.colors.backgroudLight : theme.colors.secondary};
     color: ${(props) => 
@@ -47,7 +47,6 @@ export const InputWrapper = styled.div<{ background: String }>`
         font-size: 16pt;
         text-align: center;
         color: ${theme.colors.input};
-        cursor: pointer;
         border: none;
         display: flex;
         justify-content: center;

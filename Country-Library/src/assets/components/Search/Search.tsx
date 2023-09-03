@@ -2,6 +2,7 @@ import { InputWrapper, SearchInput, SearchWrapper } from "./Search.style"
 import { BiSearch } from 'react-icons/bi';
 import useAppContext from '../../hook/useAppContext.js';
 import { useState } from "react";
+import { FormEvent } from 'react';
 
 function Search() {
 
@@ -11,26 +12,22 @@ function Search() {
         setSearch
       } = useAppContext();
 
-      const[text, setText] = useState('');
-
-    const handleText = (e) => {
-        setText(e);
-    }
-
-    const handleSearch = (e) => {
-        e.preventDefault()
-        if(text != ''){
-            setSearch(true);
-        }
+    const handleText = (e: string) => {
+        setSearch(e);
     }
 
   return (
-    <SearchWrapper onSubmit={handleSearch}>
+    <SearchWrapper>
         <InputWrapper background={darkMode ? 'primary' : 'secondary'}>
-            <button className='SearchBtn' type='submit'> 
-                <BiSearch/> 
-            </button>
-            <SearchInput background={darkMode ? 'primary' : 'secondary'} value={search} onChange={(e)=>handleText(e.target.value)}/>
+            <BiSearch className='SearchBtn'/> 
+            <SearchInput 
+                background={darkMode ? 'primary' : 'secondary'} 
+                type="text" 
+                value={search} 
+                placeholder="Search for a country..."
+                onChange={(e)=>handleText(e.target.value)}
+                required
+                />
         </InputWrapper>
     </SearchWrapper>
   )
