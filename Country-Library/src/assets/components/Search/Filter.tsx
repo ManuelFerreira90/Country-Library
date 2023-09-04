@@ -1,0 +1,57 @@
+import { ItemFilter, Filterbox, FilterPosition } from "./Filter.style";
+import useAppContext from '../../hook/useAppContext.js';
+
+function Filter() {
+
+    const {
+        darkMode,
+        ativeFilter,
+        setFilter
+      } = useAppContext();
+
+    const handleFilterCountry = (num : number) => {
+        switch (num) {
+            case 1:
+                setFilter('Africa');
+                break;
+            case 2:
+                setFilter('America');
+                break;
+            case 3:
+                setFilter('Asia');
+                break;
+            case 4:
+                setFilter('Europe');
+                break;
+            case 5:
+                setFilter('Oceania');
+                break;
+            default:
+                break;
+        }
+    }
+
+  return (
+    <FilterPosition isVisible={ativeFilter}>
+        <Filterbox background={darkMode ? 'primary' : 'secondary'}>
+            <ItemFilter onClick={()=>{handleFilterCountry(1)}}>
+                Africa
+            </ItemFilter>
+            <ItemFilter onClick={()=>{handleFilterCountry(2)}}>
+                America
+            </ItemFilter>
+            <ItemFilter onClick={()=>{handleFilterCountry(3)}}>
+                Asia
+            </ItemFilter>
+            <ItemFilter onClick={()=>{handleFilterCountry(4)}}>
+                Europe
+            </ItemFilter>
+            <ItemFilter onClick={()=>{handleFilterCountry(5)}}>
+                Oceania
+            </ItemFilter>
+        </Filterbox>
+    </FilterPosition>
+  )
+}
+
+export default Filter

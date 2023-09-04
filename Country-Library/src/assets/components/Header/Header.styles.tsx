@@ -6,7 +6,9 @@ export const HeaderStyled = styled.header<{ background: string }>`
         props.background === 'primary' ? ({ theme }) => theme.colors.backgroudLight : theme.colors.secondary};
     height: 80px;
     width: 100%;
+
     position: fixed;
+    z-index: 1000;
 
     display: flex;
     justify-content: space-between;

@@ -1,18 +1,31 @@
-import { AppContext } from './AppContext';
-import { useState } from 'react';
-import { ReactNode } from 'react';
+import { AppContext } from "./AppContext";
+import { useState } from "react";
+import { ReactNode } from "react";
 
 interface AppProviderProps {
-    children: ReactNode;
+  children: ReactNode;
 }
-  
-export default function AppProvider({ children }: AppProviderProps) { 
-    const [darkMode, setDarkMode] = useState(false);
-    const [search, setSearch] = useState('');
-  
-    return (
-      <AppContext.Provider value={{ darkMode, setDarkMode, search, setSearch }}>
-        {children}
-      </AppContext.Provider>
-    );
+
+export default function AppProvider({ children }: AppProviderProps) {
+  const [darkMode, setDarkMode] = useState(false);
+  const [search, setSearch] = useState("");
+  const [ativeFilter, setAtiveFilter] = useState(false);
+  const [filter, setFilter] = useState("");
+
+  return (
+    <AppContext.Provider
+      value={{
+        darkMode,
+        setDarkMode,
+        search,
+        setSearch,
+        ativeFilter,
+        setAtiveFilter,
+        filter,
+        setFilter,
+      }}
+    >
+      {children}
+    </AppContext.Provider>
+  );
 }

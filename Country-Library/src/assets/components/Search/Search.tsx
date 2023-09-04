@@ -1,19 +1,27 @@
-import { InputWrapper, SearchInput, SearchWrapper } from "./Search.style"
+import { FilterWrapper, InputWrapper, SearchInput, SearchWrapper } from "./Search.style"
 import { BiSearch } from 'react-icons/bi';
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import useAppContext from '../../hook/useAppContext.js';
-import { useState } from "react";
-import { FormEvent } from 'react';
+import Filter from "./Filter.js";
 
 function Search() {
 
     const {
         darkMode,
         search,
-        setSearch
+        setSearch,
+        ativeFilter,
+        setAtiveFilter,
+        setFilter
       } = useAppContext();
 
     const handleText = (e: string) => {
         setSearch(e);
+        setFilter('');
+    }
+
+    const handleFilter = () => {
+      setAtiveFilter(!ativeFilter);
     }
 
   return (
@@ -29,6 +37,13 @@ function Search() {
                 required
                 />
         </InputWrapper>
+        <FilterWrapper background={darkMode ? 'primary' : 'secondary'}>
+          <p>Filter by region</p>
+          <button onClick={()=>{handleFilter()}}>
+            {ativeFilter ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          </button>
+          <Filter />
+        </FilterWrapper>
     </SearchWrapper>
   )
 }

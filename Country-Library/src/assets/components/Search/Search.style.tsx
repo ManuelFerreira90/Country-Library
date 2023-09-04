@@ -1,9 +1,7 @@
 import styled from "styled-components"
 import { theme } from '../Theme';
-import InputSearch from "./InputSearch";
 
-
-export const SearchWrapper = styled.form`
+export const SearchWrapper = styled.div`
     
     margin-left: 10%;
     margin-right: 11%;
@@ -14,8 +12,6 @@ export const SearchWrapper = styled.form`
     align-items: center;
 
     height: 57px;
-
-    border: 1px solid black;
 `
 export const SearchInput = styled.input<{ background: String }>`
     background: ${(props) => 
@@ -57,4 +53,43 @@ export const InputWrapper = styled.div<{ background: String }>`
     height: 57px;
 
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
+`
+
+export const FilterWrapper = styled.div<{ background: String }>`
+    background: ${(props) => 
+        props.background === 'primary' ? ({ theme }) => theme.colors.backgroudLight : theme.colors.secondary};
+
+    color: ${(props) => 
+        props.background === 'primary' ? ({ theme }) => theme.fontColor.primary : theme.colors.input};
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & p{
+        font-size: 10pt;
+    }
+
+    & button{
+        display: flex;
+        align-items: center;
+        color: ${(props) => 
+            props.background === 'primary' ? ({ theme }) => theme.fontColor.primary : theme.colors.input};
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        font-size: 10pt;
+    }
+
+    width: 200px;
+    height: 57px;
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
+
+    position: relative;
 `
