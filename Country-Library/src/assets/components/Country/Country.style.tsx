@@ -11,6 +11,10 @@ export const WrapperCountry = styled.div`
   margin-right: 11%;
 
   gap: 5.7%;
+
+  @media (max-width: 595px) {
+        justify-content: center;
+  }
 `;
 
 export const CardCountry = styled.div<{ background: String }>`

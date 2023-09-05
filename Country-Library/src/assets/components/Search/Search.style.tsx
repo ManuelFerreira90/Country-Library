@@ -2,7 +2,8 @@ import styled from "styled-components"
 import { theme } from '../Theme';
 
 export const SearchWrapper = styled.div`
-    
+    padding: 145px 0px 0px 0px;
+
     margin-left: 10%;
     margin-right: 11%;
 
@@ -10,8 +11,14 @@ export const SearchWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 
-    height: 57px;
+    @media (max-width: 530px) {
+        margin-left: 5%;
+        margin-right: 5%;
+        flex-direction: column;
+        align-items: start;
+    }
 `
 export const SearchInput = styled.input<{ background: String }>`
     background: ${(props) => 
@@ -53,6 +60,10 @@ export const InputWrapper = styled.div<{ background: String }>`
     height: 57px;
 
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
+
+    @media (max-width: 595px) {
+        width: 100%;
+    }
 `
 
 export const FilterWrapper = styled.div<{ background: String }>`

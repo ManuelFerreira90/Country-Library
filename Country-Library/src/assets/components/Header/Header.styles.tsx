@@ -8,7 +8,7 @@ export const HeaderStyled = styled.header<{ background: string }>`
     width: 100%;
 
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
 
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,12 @@ export const HeaderStyled = styled.header<{ background: string }>`
 
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
 
+    @media (max-width: 595px) {
+        gap: 2px;
+        padding-right: 2px;
+        padding-left: 2px;
+        justify-content: space-evenly;
+    }
 `;
 
 export const ButtonStyled = styled.button<{ background: string }>`
@@ -35,6 +41,12 @@ export const ButtonStyled = styled.button<{ background: string }>`
     svg {
         margin-right: 10px;
     }
+    @media (max-width: 595px) {
+        padding: 0;
+        svg {
+            margin-right: 5px;
+        }
+    }   
 `;
 
 export const PStyled = styled.p<{ background: string }>`

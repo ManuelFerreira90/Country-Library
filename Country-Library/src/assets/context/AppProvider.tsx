@@ -7,7 +7,7 @@ interface AppProviderProps {
 }
 
 export default function AppProvider({ children }: AppProviderProps) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [search, setSearch] = useState("");
   const [ativeFilter, setAtiveFilter] = useState(false);
   const [filter, setFilter] = useState("");

@@ -1,4 +1,3 @@
-import React from 'react';
 import { BsMoon } from 'react-icons/bs'
 import { BsFillMoonFill } from 'react-icons/bs'
 import { HeaderStyled, ButtonStyled, PStyled } from './Header.styles';

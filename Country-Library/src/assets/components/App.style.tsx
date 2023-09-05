@@ -5,7 +5,5 @@ export const Wrapper = styled.div<{ background: string }>`
     background-color: ${(props) => 
         props.background === 'primary' ? ({ theme }) => theme.colors.primary : theme.colors.backgroundDark};
 
-    padding-top: 10%;
-
     min-height: 100vh;
 `
