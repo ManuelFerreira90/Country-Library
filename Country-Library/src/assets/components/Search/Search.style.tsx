@@ -13,6 +13,10 @@ export const SearchWrapper = styled.div`
     align-items: center;
     gap: 20px;
 
+    & a{
+        text-decoration: none;
+    }
+
     @media (max-width: 530px) {
         margin-left: 5%;
         margin-right: 5%;
@@ -84,18 +88,6 @@ export const FilterWrapper = styled.div<{ background: String }>`
         font-size: 10pt;
     }
 
-    & button{
-        display: flex;
-        align-items: center;
-        color: ${(props) => 
-            props.background === 'primary' ? ({ theme }) => theme.fontColor.primary : theme.colors.input};
-        background: transparent;
-        border: none;
-        cursor: pointer;
-
-        font-size: 10pt;
-    }
-
     width: 200px;
     height: 57px;
     border-radius: 5px;
@@ -103,4 +95,16 @@ export const FilterWrapper = styled.div<{ background: String }>`
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
 
     position: relative;
+`
+
+export const Button = styled.button<{ background: String }>`
+    display: flex;
+    align-items: center;
+    color: ${(props) => 
+        props.background === 'primary' ? ({ theme }) => theme.fontColor.primary : theme.colors.input};
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font-size: 10pt;
 `

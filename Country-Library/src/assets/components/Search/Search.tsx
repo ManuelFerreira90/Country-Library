@@ -1,4 +1,4 @@
-import { FilterWrapper, InputWrapper, SearchInput, SearchWrapper } from "./Search.style"
+import { Button, FilterWrapper, InputWrapper, SearchInput, SearchWrapper } from "./Search.style"
 import { BiSearch } from 'react-icons/bi';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
 import useAppContext from '../../hook/useAppContext.js';
@@ -39,9 +39,9 @@ function Search() {
         </InputWrapper>
         <FilterWrapper background={darkMode ? 'primary' : 'secondary'}>
           <p>Filter by region</p>
-          <button onClick={()=>{handleFilter()}}>
+          <Button onClick={()=>{handleFilter()}}>
             {ativeFilter ? <IoIosArrowUp /> : <IoIosArrowDown />}
-          </button>
+          </Button>
           <Filter />
         </FilterWrapper>
     </SearchWrapper>

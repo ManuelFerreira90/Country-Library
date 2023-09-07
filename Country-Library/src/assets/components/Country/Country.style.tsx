@@ -36,6 +36,7 @@ export const CardCountry = styled.div<{ background: String }>`
     & img{
         width: 222px;
         height: 150px;
+        cursor: pointer;
     }
 
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);

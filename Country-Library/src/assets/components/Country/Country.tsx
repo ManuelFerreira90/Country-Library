@@ -1,8 +1,10 @@
+import React from 'react';
 import { useEffect, useState } from 'react';
 import fetchCountry from '../../api/fetchCountry.js';
 import { CountryComponets } from './../../types/CountryComponets';
 import { CardCountry, CardInfo, WrapperCountry } from './Country.style';
 import useAppContext from '../../hook/useAppContext.js';
+import { Link } from "react-router-dom";
 
 function Country() {
 
@@ -38,10 +40,12 @@ function Country() {
       }
     
       return filteredCountries.map((Country) => {
-        const { flags, name, population, region, capital } = Country;
+        const { flags, name, population, region, capital, ccn3, subregion } = Country;
         return (
-          <CardCountry background={darkMode ? 'primary' : 'secondary'} key={name.common}>
-            <img src={flags.png} alt="" />
+          <CardCountry background={darkMode ? 'primary' : 'secondary'} key={ ccn3 }>
+            <Link to={`/Country-Library/Detail/${ ccn3 }`}>
+              <img src={flags.png} alt={ name.common } />
+            </Link>
             <CardInfo textColor={darkMode ? 'primary' : 'secondary'}>
               <p>{name.common}</p>
               <p><span className="region-label">Population:</span> {population.toLocaleString()}</p>

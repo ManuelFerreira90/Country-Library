@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './page/App.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -19,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Header />
         <Routes>
             <Route path='/Country-Library/' element={ <App/> }></Route>
-            <Route path='/Country-Library/CountryDetail/:name' element={ <CountryDetail/> }></Route>
+            <Route path='/Country-Library/Detail/:code' element={ <CountryDetail/> }></Route>
         </Routes>
       </ThemeProvider>
     </AppProvider>
