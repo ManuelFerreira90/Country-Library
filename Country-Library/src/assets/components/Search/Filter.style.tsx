@@ -30,8 +30,8 @@ export const ItemFilter = styled.li`
 
     cursor: pointer;
 `
-export const FilterPosition = styled.div<{ isVisible: boolean }>`
-  display: ${(props) => (props.isVisible ? 'block' : 'none')};
+export const FilterPosition = styled.div<{ isvisible: string }>`
+  display: ${(props) => (props.isvisible === 'true' ? 'block' : 'none')};
   position: absolute;
   top: 60px;
   right: 0px;

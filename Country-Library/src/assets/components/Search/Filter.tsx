@@ -1,5 +1,6 @@
 import { ItemFilter, Filterbox, FilterPosition } from "./Filter.style";
 import useAppContext from '../../hook/useAppContext.js';
+import { StyleSheetManager } from 'styled-components';
 
 function Filter() {
 
@@ -32,25 +33,27 @@ function Filter() {
     }
 
   return (
-    <FilterPosition isVisible={ativeFilter}>
-        <Filterbox background={darkMode ? 'primary' : 'secondary'}>
-            <ItemFilter onClick={()=>{handleFilterCountry(1)}}>
-                Africa
-            </ItemFilter>
-            <ItemFilter onClick={()=>{handleFilterCountry(2)}}>
-                America
-            </ItemFilter>
-            <ItemFilter onClick={()=>{handleFilterCountry(3)}}>
-                Asia
-            </ItemFilter>
-            <ItemFilter onClick={()=>{handleFilterCountry(4)}}>
-                Europe
-            </ItemFilter>
-            <ItemFilter onClick={()=>{handleFilterCountry(5)}}>
-                Oceania
-            </ItemFilter>
-        </Filterbox>
-    </FilterPosition>
+    <StyleSheetManager shouldForwardProp={() => true}>
+        <FilterPosition isvisible={ativeFilter ? 'true' : 'false'}>
+            <Filterbox background={darkMode ? 'primary' : 'secondary'}>
+                <ItemFilter onClick={()=>{handleFilterCountry(1)}}>
+                    Africa
+                </ItemFilter>
+                <ItemFilter onClick={()=>{handleFilterCountry(2)}}>
+                    America
+                </ItemFilter>
+                <ItemFilter onClick={()=>{handleFilterCountry(3)}}>
+                    Asia
+                </ItemFilter>
+                <ItemFilter onClick={()=>{handleFilterCountry(4)}}>
+                    Europe
+                </ItemFilter>
+                <ItemFilter onClick={()=>{handleFilterCountry(5)}}>
+                    Oceania
+                </ItemFilter>
+            </Filterbox>
+        </FilterPosition>
+    </StyleSheetManager>
   )
 }
 

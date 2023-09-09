@@ -17,7 +17,7 @@ export const WrapperCountry = styled.div`
   }
 `;
 
-export const CardCountry = styled.div<{ background: String }>`
+export const CardCountry = styled.div<{ background: string }>`
     display: flex;
     flex-direction: column;
 
@@ -42,14 +42,14 @@ export const CardCountry = styled.div<{ background: String }>`
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
 `;
 
-export const CardInfo = styled.div<{ textColor: String}>`
+export const CardInfo = styled.div<{ textcolor: string}>`
     display: flex;
     flex-direction: column;
     
     margin: 10%;
 
     color: ${(props) => 
-        props.textColor === 'primary' ? ({ theme }) => theme.fontColor.primary : theme.fontColor.secondary};
+        props.textcolor === 'primary' ? ({ theme }) => theme.fontColor.primary : theme.fontColor.secondary};
 
     & p:first-child{
         font-weight: bold;
