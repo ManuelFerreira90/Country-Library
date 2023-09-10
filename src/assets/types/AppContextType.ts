@@ -1,10 +1,12 @@
-export interface AppContextType{
-    darkMode: boolean;
-    setDarkMode: (darkMode: boolean) => void;
-    search: String;
-    setSearch: (search: String) => void;
-    ativeFilter: boolean;
-    setAtiveFilter: (darkMode: boolean) => void;
-    filter: String;
-    setFilter: (search: String) => void;
+import { Dispatch, SetStateAction } from 'react';
+
+export interface AppContextType {
+  darkMode: boolean;
+  setDarkMode: (darkMode: boolean) => void;
+  search: string;
+  setSearch: Dispatch<SetStateAction<string>>;
+  ativeFilter: boolean;
+  setAtiveFilter: (ativeFilter: boolean) => void;
+  filter: string;
+  setFilter: Dispatch<SetStateAction<string>>;
 }
