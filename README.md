@@ -30,7 +30,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-- URL do Site em Execução: [Adicione a URL do site em execução aqui](https://your-live-site-url.com)
+- URL do Site em Execução: [Clique aqui](https://manuelferreira90.github.io/Country-Library/)
 
 ## Meu Processo
 
