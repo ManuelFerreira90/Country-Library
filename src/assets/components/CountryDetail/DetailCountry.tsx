@@ -131,7 +131,9 @@ function DetailCountry() {
               </DetailCountryInfo>
             </InfoDescription>
             <BorderInfo textcolor={darkMode ? 'primary' : 'secondary'}>
-              <p className="boder-Contry">Border Countries: </p>
+              {borderElements && borderElements.length > 1 && (
+                <p className="boder-Contry">Border Countries: </p>
+              )}
               <div className="wrapper">
                 {borderElements}
               </div>
