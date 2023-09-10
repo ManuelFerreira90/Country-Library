@@ -18,6 +18,18 @@ export const DetailCountryWrapper = styled.div`
         width: 400px;
     }
 
+    @media (max-width: 900px) {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @media (max-width: 500px) {
+        & img {
+            height: 200px;
+            width: 300px;
+        }
+    }
+
 `
 export const InfoWrapper = styled.div<{ textcolor: String}>`
     display: flex;
@@ -100,5 +112,9 @@ export const BorderInfo = styled.div<{ textcolor: String}>`
         padding: 5px 20px;
         box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.05);
         cursor: pointer;
+    }
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
     }
 `
