@@ -26,11 +26,11 @@ Os usuários devem ser capazes de:
 
 ### Captura de Tela
 
-![Captura de Tela](./screenshot.jpg)
+![library](https://github.com/ManuelFerreira90/Country-Library/assets/105729881/6afc9626-2c60-49ab-a45b-9584ea8df5f9)
 
 ### Links
 
-- URL do Site em Execução: [Adicione a URL do site em execução aqui](https://your-live-site-url.com)
+- URL do Site em Execução: [Clique aqui](https://manuelferreira90.github.io/Country-Library/)
 
 ## Meu Processo
 
