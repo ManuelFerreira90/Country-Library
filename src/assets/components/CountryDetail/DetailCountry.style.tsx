@@ -7,7 +7,6 @@ export const DetailCountryWrapper = styled.div`
     flex-direction: row;
     gap: 90px;
 
-    padding-top: 5%;
     margin-left: 10%;
     margin-right: 11%;
     padding-bottom: 15%;

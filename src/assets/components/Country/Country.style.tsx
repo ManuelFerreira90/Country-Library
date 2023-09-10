@@ -6,7 +6,6 @@ export const WrapperCountry = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
 
-  padding-top: 5%;
   margin-left: 10%;
   margin-right: 11%;
 

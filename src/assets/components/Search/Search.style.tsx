@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { theme } from '../Theme';
 
 export const SearchWrapper = styled.div`
-    padding: 145px 0px 0px 0px;
+    padding: 145px 0px 75px 0px ;
 
     margin-left: 10%;
     margin-right: 11%;
